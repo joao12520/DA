@@ -1,0 +1,35 @@
+\hypertarget{_graph_8h_source}{}\doxysection{Graph.\+h}
+\mbox{\hyperlink{_graph_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ PROJDA\_GRAPH\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ PROJDA\_GRAPH\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_station___vertex_8h}{Station\_Vertex.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_path___edge_8h}{Path\_Edge.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_graph}{Graph}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ vector<Station\_Vertex>\ \mbox{\hyperlink{class_graph_a244d99ed57dcd9ef90eedbe72e0d4686}{vertexs}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_graph_adabef39071a710a0555b07bcfca62232}{addVertex}}(\mbox{\hyperlink{class_station___vertex}{Station\_Vertex}}\&\ station);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_graph_a09f0d3f72e06704ce8f774b509578489}{addEdge}}(\textcolor{keywordtype}{int}\ source,\ \textcolor{keywordtype}{int}\ dest,\ \mbox{\hyperlink{class_path___edge}{Path\_Edge}}\&\ edge);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \ \ \ \ vector<Station\_Vertex>\&\ \mbox{\hyperlink{class_graph_aba9e9d74fca32b7669754fc30de93b19}{getVertexs}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_a82a3cc1bbe67e97ceead8deef2975aa1}{bfsConnectedPaths}}(\textcolor{keywordtype}{int}\ code);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_graph_a374bd2b09bdd3fb1cff14ca71aa20fc1}{bfsMaxFlow}}(\textcolor{keywordtype}{int}\ source,\ \textcolor{keywordtype}{int}\ dest,\ vector<int>\&\ parent);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_graph_a4189d1514d7b041e0a12903108e7db31}{pathIsPossible}}(\textcolor{keywordtype}{int}\ source,\ \textcolor{keywordtype}{int}\ dest);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_a01e121d9bd2be8969a1ad4a08d4f53ef}{resetResiduals}}();}
+\DoxyCodeLine{00074\ \};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//PROJDA\_GRAPH\_H}}
+
+\end{DoxyCode}

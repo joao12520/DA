@@ -1,0 +1,615 @@
+\hypertarget{class_graph}{}\doxysection{Graph Class Reference}
+\label{class_graph}\index{Graph@{Graph}}
+
+
+Represents a graph.  
+
+
+
+
+{\ttfamily \#include $<$Graph.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}\label{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}} 
+{\bfseries Graph} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \mbox{\hyperlink{class_graph}{Graph}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graph_a7b14c9bc0b5fbf50165aaf92f4aeef1d}{Graph}} (int n)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for the \mbox{\hyperlink{class_graph}{Graph}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graph_acf6795bc8951d6127463b7acc861fe25}{Graph}} (vector$<$ \mbox{\hyperlink{structnode}{node}} $>$ \mbox{\hyperlink{class_graph_aa5a56df7d8b0a08b6def3c21d4308577}{nodes}})
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for the \mbox{\hyperlink{class_graph}{Graph}} class. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{structnode}{node}} $>$ \mbox{\hyperlink{class_graph_ad12189252977811dcb0912695f2df931}{get\+Nodes}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the nodes in the graph. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_graph_a90f9107e20da8671d074b15309e9a20f}{tsp\+BT}} (unsigned int n, unsigned int path\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Solves the Traveling Salesman Problem using the backtracking approach. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a807d3fac7b54b21b0db93e27d827f23c}{tsp\+BTRec}} (unsigned int n, unsigned int cur\+Index, unsigned int cur\+Dist, unsigned int cur\+Path\mbox{[}$\,$\mbox{]}, unsigned int \&min\+Dist, unsigned int path\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Recursive function for the backtracking approach to solve the Traveling Salesman Problem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a3b458d66099641cf4519e4fa7b8277a1}{add\+Edge}} (int source, int dest, double weight)
+\begin{DoxyCompactList}\small\item\em Adds an edge to the graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a442deae8d93a0f59de6501796d3925b0}{add\+Node}} (const \mbox{\hyperlink{structnode}{node}} \&n)
+\begin{DoxyCompactList}\small\item\em Adds a node to the graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a505398787c7e3ebc07c1e4c1907e3411}{add\+Perfect\+Matching}} (vector$<$ \mbox{\hyperlink{structedge}{edge}} $>$ edges)
+\begin{DoxyCompactList}\small\item\em Adds a perfect matching to the graph. \end{DoxyCompactList}\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_graph_a69f98e986cbf51cf28d6db3664dfbc48}{eulerian\+Cycle}} ()
+\begin{DoxyCompactList}\small\item\em Finds an Eulerian cycle in the graph. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_graph_a3bc6c0e5211c93d54a3c4f8c11508a2e}{get\+Augmenting\+Path}} (int s)
+\begin{DoxyCompactList}\small\item\em Finds an augmenting path in the graph using the Blossom Algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a8bc5fb36496fc9a38efe656fa4a39bcf}{reset\+\_\+values}} ()
+\begin{DoxyCompactList}\small\item\em Resets the values of the nodes in the graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a0ca4e47f47d10c21d871be0307173593}{reset\+\_\+visited}} ()
+\begin{DoxyCompactList}\small\item\em Resets the visited flag and parent of the nodes in the graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graph}{Graph}} \mbox{\hyperlink{class_graph_a48a92d74e5ef7c79ddabb6c357949c49}{make\+MSTGraph}} (const vector$<$ \mbox{\hyperlink{structedge}{edge}} $>$ \&mst) const
+\begin{DoxyCompactList}\small\item\em Creates a new graph from a minimum spanning tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_abd27f6c402d190f0d46945ec6e71f152}{blossom\+Mark}} (int lca, int s)
+\begin{DoxyCompactList}\small\item\em Marks nodes in a blossom during the Blossom Algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a70a78ccd847b4cbd8b62de4b6dde60e2}{blossom\+Contract}} (int s, int u, int v, queue$<$ int $>$ \&q)
+\begin{DoxyCompactList}\small\item\em Contracts a blossom during the Blossom Algorithm. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_graph_afc921d9884b7a90038191f448d31cd43}{find\+CA}} (int root, int u, int v)
+\begin{DoxyCompactList}\small\item\em Finds the lowest common ancestor of two nodes. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{structedge}{edge}} $>$ \mbox{\hyperlink{class_graph_aa3484ed1d56caf2ba257dfe7f568638e}{mst\+Prim}} ()
+\begin{DoxyCompactList}\small\item\em Finds a minimum spanning tree using Prim\textquotesingle{}s algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a0c82196895d2cef983954dfb74617eba}{change\+Pairs}} (int v)
+\begin{DoxyCompactList}\small\item\em Changes the pairs of nodes during the Blossom Algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a36acdcc43a0592170316c4b583091471}{odd\+Degree}} (const vector$<$ \mbox{\hyperlink{structnode}{node}} $>$ \&nods)
+\begin{DoxyCompactList}\small\item\em Identifies nodes with odd degrees in the graph. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{structedge}{edge}} $>$ \mbox{\hyperlink{class_graph_ab49afc00278eb4dee72ce470bacd4522}{Blossom\+Algorithm}} (vector$<$ \mbox{\hyperlink{structedge}{edge}} $>$ mst)
+\begin{DoxyCompactList}\small\item\em Executes the Blossom Algorithm. \end{DoxyCompactList}\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_graph_a43b4a3e9504dc9a715e27762504768a2}{Christofides\+Algorithm}} ()
+\begin{DoxyCompactList}\small\item\em Executes the Christofides Algorithm to find an approximate solution to the Traveling Salesman Problem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_ab0599c99a927159e454a5b3ded58ca54}{tsp\+Approximation}} ()
+\begin{DoxyCompactList}\small\item\em Solves the Traveling Salesman Problem using Triangular Approximation algorithm. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_graph_adcc42aaed8e8653052598c5410c80033}{get\+Distance}} (const \mbox{\hyperlink{structnode}{node}} \&node1, const \mbox{\hyperlink{structnode}{node}} \&node2)
+\begin{DoxyCompactList}\small\item\em Calculates the Haversine distance between two nodes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a29731639465cab257e3d0d341e8756f7}{adjust\+Graph}} (bool to\+Complete)
+\begin{DoxyCompactList}\small\item\em Adjusts the graph so that it respects the triangular inequality rule. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{structnode}{node}} $>$ \mbox{\hyperlink{class_graph_aa5a56df7d8b0a08b6def3c21d4308577}{nodes}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a graph. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_graph_a7b14c9bc0b5fbf50165aaf92f4aeef1d}\label{class_graph_a7b14c9bc0b5fbf50165aaf92f4aeef1d}} 
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Graph\+::\+Graph (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parameterized constructor for the \mbox{\hyperlink{class_graph}{Graph}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The number of nodes in the graph. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_acf6795bc8951d6127463b7acc861fe25}\label{class_graph_acf6795bc8951d6127463b7acc861fe25}} 
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Graph\+::\+Graph (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{structnode}{node}} $>$}]{nodes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parameterized constructor for the \mbox{\hyperlink{class_graph}{Graph}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & The nodes in the graph. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_a3b458d66099641cf4519e4fa7b8277a1}\label{class_graph_a3b458d66099641cf4519e4fa7b8277a1}} 
+\index{Graph@{Graph}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily void Graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{int}]{source,  }\item[{int}]{dest,  }\item[{double}]{weight }\end{DoxyParamCaption})}
+
+
+
+Adds an edge to the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The source node of the edge. \\
+\hline
+{\em dest} & The destination node of the edge. \\
+\hline
+{\em weight} & The weight of the edge.\\
+\hline
+{\em source} & The source node ID of the edge. \\
+\hline
+{\em dest} & The destination node ID of the edge. \\
+\hline
+{\em weight} & The weight/cost of the edge. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a442deae8d93a0f59de6501796d3925b0}\label{class_graph_a442deae8d93a0f59de6501796d3925b0}} 
+\index{Graph@{Graph}!addNode@{addNode}}
+\index{addNode@{addNode}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addNode()}{addNode()}}
+{\footnotesize\ttfamily void Graph\+::add\+Node (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structnode}{node}} \&}]{n }\end{DoxyParamCaption})}
+
+
+
+Adds a node to the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The node to add.\\
+\hline
+{\em n} & The node to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a505398787c7e3ebc07c1e4c1907e3411}\label{class_graph_a505398787c7e3ebc07c1e4c1907e3411}} 
+\index{Graph@{Graph}!addPerfectMatching@{addPerfectMatching}}
+\index{addPerfectMatching@{addPerfectMatching}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addPerfectMatching()}{addPerfectMatching()}}
+{\footnotesize\ttfamily void Graph\+::add\+Perfect\+Matching (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{structedge}{edge}} $>$}]{edges }\end{DoxyParamCaption})}
+
+
+
+Adds a perfect matching to the graph. 
+
+Adds the edges of a perfect matching to the graph. This function adds the edges of a perfect matching to the graph. The edges are provided as a vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The edges representing the perfect matching.\\
+\hline
+{\em edges} & The edges of the perfect matching to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a29731639465cab257e3d0d341e8756f7}\label{class_graph_a29731639465cab257e3d0d341e8756f7}} 
+\index{Graph@{Graph}!adjustGraph@{adjustGraph}}
+\index{adjustGraph@{adjustGraph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{adjustGraph()}{adjustGraph()}}
+{\footnotesize\ttfamily void Graph\+::adjust\+Graph (\begin{DoxyParamCaption}\item[{bool}]{to\+Complete }\end{DoxyParamCaption})}
+
+
+
+Adjusts the graph so that it respects the triangular inequality rule. 
+
+This function adjusts the graph edges so that the triangular inequality is met. The function iterates through the existing edges and checks if, in a pair of three vertexes (A, B and C), the weights of the edges that connect them follow the rule of Weight(A-\/\texorpdfstring{$>$}{>}B) + Weight(B-\/\texorpdfstring{$>$}{>}C) \texorpdfstring{$>$}{>}= Weight(A-\/\texorpdfstring{$>$}{>}C).
+
+
+\begin{DoxyParams}{Parameters}
+{\em to\+Complete} & flag to know if the graph should be completed or just adjusted\\
+\hline
+{\em to\+Complete} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_ab49afc00278eb4dee72ce470bacd4522}\label{class_graph_ab49afc00278eb4dee72ce470bacd4522}} 
+\index{Graph@{Graph}!BlossomAlgorithm@{BlossomAlgorithm}}
+\index{BlossomAlgorithm@{BlossomAlgorithm}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{BlossomAlgorithm()}{BlossomAlgorithm()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{structedge}{edge}} $>$ Graph\+::\+Blossom\+Algorithm (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{structedge}{edge}} $>$}]{mst }\end{DoxyParamCaption})}
+
+
+
+Executes the Blossom Algorithm. 
+
+Finds the minimum weight matching of odd-\/degree nodes using the Blossom algorithm.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mst} & The minimum spanning tree. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The edges of the perfect matching.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em mst} & A minimum spanning tree of the graph. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of edges representing the minimum weight matching. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a70a78ccd847b4cbd8b62de4b6dde60e2}\label{class_graph_a70a78ccd847b4cbd8b62de4b6dde60e2}} 
+\index{Graph@{Graph}!blossomContract@{blossomContract}}
+\index{blossomContract@{blossomContract}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{blossomContract()}{blossomContract()}}
+{\footnotesize\ttfamily void Graph\+::blossom\+Contract (\begin{DoxyParamCaption}\item[{int}]{s,  }\item[{int}]{u,  }\item[{int}]{v,  }\item[{queue$<$ int $>$ \&}]{q }\end{DoxyParamCaption})}
+
+
+
+Contracts a blossom during the Blossom Algorithm. 
+
+Contracts a blossom. This function contracts a blossom in the graph. It marks the nodes in the blossom, updates the parent pointers, and assigns the base node for each node in the blossom. It also adds the newly contracted nodes to the BFS queue for further exploration.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The starting node. \\
+\hline
+{\em u} & The first node of the blossom. \\
+\hline
+{\em v} & The second node of the blossom. \\
+\hline
+{\em q} & The queue of unvisited nodes.\\
+\hline
+{\em s} & The source node of the current augmenting path. \\
+\hline
+{\em u} & The first node of the blossom. \\
+\hline
+{\em v} & The second node of the blossom. \\
+\hline
+{\em q} & The queue of unvisited nodes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_abd27f6c402d190f0d46945ec6e71f152}\label{class_graph_abd27f6c402d190f0d46945ec6e71f152}} 
+\index{Graph@{Graph}!blossomMark@{blossomMark}}
+\index{blossomMark@{blossomMark}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{blossomMark()}{blossomMark()}}
+{\footnotesize\ttfamily void Graph\+::blossom\+Mark (\begin{DoxyParamCaption}\item[{int}]{lca,  }\item[{int}]{s }\end{DoxyParamCaption})}
+
+
+
+Marks nodes in a blossom during the Blossom Algorithm. 
+
+Marks the nodes in a blossom. This function marks the nodes in a blossom starting from the given LCA (lowest common ancestor) and going up to the current node. It sets the is\+In\+Blossom flag to true for each node in the blossom. It also updates the parent pointer for the current node if it is not the LCA.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lca} & The lowest common ancestor node. \\
+\hline
+{\em s} & The starting node.\\
+\hline
+{\em lca} & The lowest common ancestor of the blossom. \\
+\hline
+{\em s} & The current node. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a0c82196895d2cef983954dfb74617eba}\label{class_graph_a0c82196895d2cef983954dfb74617eba}} 
+\index{Graph@{Graph}!changePairs@{changePairs}}
+\index{changePairs@{changePairs}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{changePairs()}{changePairs()}}
+{\footnotesize\ttfamily void Graph\+::change\+Pairs (\begin{DoxyParamCaption}\item[{int}]{v }\end{DoxyParamCaption})}
+
+
+
+Changes the pairs of nodes during the Blossom Algorithm. 
+
+Changes the pairs in the augmenting path. This function changes the pairs in the augmenting path found by get\+Augmenting\+Path. It iterates through the path, updating the pair and paired flags for each node.
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The starting node.\\
+\hline
+{\em v} & The node where the augmenting path ends. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a43b4a3e9504dc9a715e27762504768a2}\label{class_graph_a43b4a3e9504dc9a715e27762504768a2}} 
+\index{Graph@{Graph}!ChristofidesAlgorithm@{ChristofidesAlgorithm}}
+\index{ChristofidesAlgorithm@{ChristofidesAlgorithm}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{ChristofidesAlgorithm()}{ChristofidesAlgorithm()}}
+{\footnotesize\ttfamily vector$<$ int $>$ Graph\+::\+Christofides\+Algorithm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Executes the Christofides Algorithm to find an approximate solution to the Traveling Salesman Problem. 
+
+Implements the Christofides\textquotesingle{} algorithm to find an approximate solution to the Traveling Salesman Problem. This function implements the Christofides\textquotesingle{} algorithm to find an approximate solution to the Traveling Salesman Problem. It first resets the values of all nodes in the graph. Then, it performs Prim\textquotesingle{}s algorithm to find the minimum spanning tree (MST) of the graph and creates a new graph with the MST edges. It identifies nodes with odd degrees in the new graph and applies the Blossom algorithm to find a perfect matching. The perfect matching edges are added to the new graph, and an Eulerian cycle is found. Finally, an Hamiltoninan circuit is returned as the approximate solution to the TSP.
+
+\begin{DoxyReturn}{Returns}
+The approximate solution.
+
+The approximate solution to the Traveling Salesman Problem. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a69f98e986cbf51cf28d6db3664dfbc48}\label{class_graph_a69f98e986cbf51cf28d6db3664dfbc48}} 
+\index{Graph@{Graph}!eulerianCycle@{eulerianCycle}}
+\index{eulerianCycle@{eulerianCycle}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{eulerianCycle()}{eulerianCycle()}}
+{\footnotesize\ttfamily vector$<$ int $>$ Graph\+::eulerian\+Cycle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Finds an Eulerian cycle in the graph. 
+
+Finds an Eulerian cycle in the graph and then a Hamiltonian circuit. This function finds an Eulerian cycle in the graph using the Hierholzer\textquotesingle{}s algorithm. It starts from a given node, explores all edges in a depth-\/first manner, and returns the Eulerian cycle as a vector of node IDs. Then, it cleans the repeated vertexes and finds a Hamiltonian circuit.
+
+\begin{DoxyReturn}{Returns}
+The nodes in the Eulerian cycle.
+
+The Eulerian cycle in the graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_afc921d9884b7a90038191f448d31cd43}\label{class_graph_afc921d9884b7a90038191f448d31cd43}} 
+\index{Graph@{Graph}!findCA@{findCA}}
+\index{findCA@{findCA}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{findCA()}{findCA()}}
+{\footnotesize\ttfamily int Graph\+::find\+CA (\begin{DoxyParamCaption}\item[{int}]{root,  }\item[{int}]{u,  }\item[{int}]{v }\end{DoxyParamCaption})}
+
+
+
+Finds the lowest common ancestor of two nodes. 
+
+Finds the lowest common ancestor (LCA) of two nodes in the contracted graph. This function finds the lowest common ancestor of two nodes in the contracted graph using the base and pair information stored in the nodes. It starts from the given root node and iteratively follows the parent and base pointers until it reaches the root node again.
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & The root node. \\
+\hline
+{\em u} & The first node. \\
+\hline
+{\em v} & The second node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The lowest common ancestor.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em root} & The root node of the contracted graph. \\
+\hline
+{\em u} & The first node. \\
+\hline
+{\em v} & The second node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The lowest common ancestor of the two nodes in the contracted graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a3bc6c0e5211c93d54a3c4f8c11508a2e}\label{class_graph_a3bc6c0e5211c93d54a3c4f8c11508a2e}} 
+\index{Graph@{Graph}!getAugmentingPath@{getAugmentingPath}}
+\index{getAugmentingPath@{getAugmentingPath}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getAugmentingPath()}{getAugmentingPath()}}
+{\footnotesize\ttfamily int Graph\+::get\+Augmenting\+Path (\begin{DoxyParamCaption}\item[{int}]{s }\end{DoxyParamCaption})}
+
+
+
+Finds an augmenting path in the graph using the Blossom Algorithm. 
+
+Finds an augmenting path starting from the given source node. This function performs a BFS search to find an augmenting path in the graph starting from the given source node. It explores the graph by following the edges and updates the parent pointers for each visited node. If an augmenting path is found, it returns the node where the path ends.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The starting node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The destination node of the augmenting path, or -\/1 if no augmenting path is found.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The source node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The node where the augmenting path ends, or -\/1 if no augmenting path is found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_adcc42aaed8e8653052598c5410c80033}\label{class_graph_adcc42aaed8e8653052598c5410c80033}} 
+\index{Graph@{Graph}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}}
+{\footnotesize\ttfamily double Graph\+::get\+Distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structnode}{node}} \&}]{node1,  }\item[{const \mbox{\hyperlink{structnode}{node}} \&}]{node2 }\end{DoxyParamCaption})}
+
+
+
+Calculates the Haversine distance between two nodes. 
+
+Calculates the distance between two nodes using the Haversine formula. The Haversine formula is used to compute the great-\/circle distance between two points on a sphere (e.\+g., Earth) given their latitude and longitude coordinates.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node1} & The first node. \\
+\hline
+{\em node2} & The second node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Haversine distance between the nodes.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em node1} & The first node. \\
+\hline
+{\em node2} & The second node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The distance between the two nodes in the same unit as the Earth\textquotesingle{}s radius. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_ad12189252977811dcb0912695f2df931}\label{class_graph_ad12189252977811dcb0912695f2df931}} 
+\index{Graph@{Graph}!getNodes@{getNodes}}
+\index{getNodes@{getNodes}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getNodes()}{getNodes()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{structnode}{node}} $>$ Graph\+::get\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the nodes in the graph. 
+
+Gets all the nodes in the graph.
+
+\begin{DoxyReturn}{Returns}
+The nodes in the graph.
+
+A vector of nodes in the graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a48a92d74e5ef7c79ddabb6c357949c49}\label{class_graph_a48a92d74e5ef7c79ddabb6c357949c49}} 
+\index{Graph@{Graph}!makeMSTGraph@{makeMSTGraph}}
+\index{makeMSTGraph@{makeMSTGraph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{makeMSTGraph()}{makeMSTGraph()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graph}{Graph}} Graph\+::make\+MSTGraph (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{structedge}{edge}} $>$ \&}]{mst }\end{DoxyParamCaption}) const}
+
+
+
+Creates a new graph from a minimum spanning tree. 
+
+Creates a new graph with the given edges as the minimum spanning tree. This function creates a new graph with the given edges as the minimum spanning tree. It copies the nodes from the current graph and adds the edges of the MST to the new graph.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mst} & The minimum spanning tree. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new graph.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em mst} & The edges of the minimum spanning tree. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new graph with the given MST edges. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_aa3484ed1d56caf2ba257dfe7f568638e}\label{class_graph_aa3484ed1d56caf2ba257dfe7f568638e}} 
+\index{Graph@{Graph}!mstPrim@{mstPrim}}
+\index{mstPrim@{mstPrim}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{mstPrim()}{mstPrim()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{structedge}{edge}} $>$ Graph\+::mst\+Prim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Finds a minimum spanning tree using Prim\textquotesingle{}s algorithm. 
+
+Performs Prim\textquotesingle{}s algorithm to find the minimum spanning tree (MST) of the graph. This function uses Prim\textquotesingle{}s algorithm to find the MST of the graph. It starts from node 0 as the initial node, maintains a priority queue of edges, and keeps track of the parent and distance of each node. It returns the edges of the MST.
+
+\begin{DoxyReturn}{Returns}
+The edges of the minimum spanning tree. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a36acdcc43a0592170316c4b583091471}\label{class_graph_a36acdcc43a0592170316c4b583091471}} 
+\index{Graph@{Graph}!oddDegree@{oddDegree}}
+\index{oddDegree@{oddDegree}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{oddDegree()}{oddDegree()}}
+{\footnotesize\ttfamily void Graph\+::odd\+Degree (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{structnode}{node}} $>$ \&}]{nods }\end{DoxyParamCaption})}
+
+
+
+Identifies nodes with odd degrees in the graph. 
+
+Determines if each node in the given vector has an odd number of edges. This function checks if each node in the given vector has an odd number of edges. If a node has an odd number of edges, its \char`\"{}is\+Odd\char`\"{} flag is set to true in the current graph.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nods} & The nodes in the graph.\\
+\hline
+{\em nods} & The vector of nodes to check. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a8bc5fb36496fc9a38efe656fa4a39bcf}\label{class_graph_a8bc5fb36496fc9a38efe656fa4a39bcf}} 
+\index{Graph@{Graph}!reset\_values@{reset\_values}}
+\index{reset\_values@{reset\_values}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{reset\_values()}{reset\_values()}}
+{\footnotesize\ttfamily void Graph\+::reset\+\_\+values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets the values of the nodes in the graph. 
+
+Resets the values of all nodes in the graph. This function resets the visited, is\+In\+Blossom, paired, pair, base, and parent values of all nodes in the graph. \mbox{\Hypertarget{class_graph_a0ca4e47f47d10c21d871be0307173593}\label{class_graph_a0ca4e47f47d10c21d871be0307173593}} 
+\index{Graph@{Graph}!reset\_visited@{reset\_visited}}
+\index{reset\_visited@{reset\_visited}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{reset\_visited()}{reset\_visited()}}
+{\footnotesize\ttfamily void Graph\+::reset\+\_\+visited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets the visited flag and parent of the nodes in the graph. 
+
+Resets the visited, parent, and base values of all nodes in the graph. \mbox{\Hypertarget{class_graph_ab0599c99a927159e454a5b3ded58ca54}\label{class_graph_ab0599c99a927159e454a5b3ded58ca54}} 
+\index{Graph@{Graph}!tspApproximation@{tspApproximation}}
+\index{tspApproximation@{tspApproximation}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{tspApproximation()}{tspApproximation()}}
+{\footnotesize\ttfamily void Graph\+::tsp\+Approximation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Solves the Traveling Salesman Problem using Triangular Approximation algorithm. 
+
+Approximates the Travelling Salesman Problem (TSP) using a heuristic algorithm. \mbox{\Hypertarget{class_graph_a90f9107e20da8671d074b15309e9a20f}\label{class_graph_a90f9107e20da8671d074b15309e9a20f}} 
+\index{Graph@{Graph}!tspBT@{tspBT}}
+\index{tspBT@{tspBT}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{tspBT()}{tspBT()}}
+{\footnotesize\ttfamily unsigned int Graph\+::tsp\+BT (\begin{DoxyParamCaption}\item[{unsigned int}]{n,  }\item[{unsigned int}]{path\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Solves the Traveling Salesman Problem using the backtracking approach. 
+
+Finds the minimum distance Hamiltonian path using backtracking.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The number of nodes. \\
+\hline
+{\em path} & The array to store the path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length of the shortest path.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The number of nodes in the graph. \\
+\hline
+{\em path} & An array to store the best path found. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The minimum distance of the Hamiltonian path. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a807d3fac7b54b21b0db93e27d827f23c}\label{class_graph_a807d3fac7b54b21b0db93e27d827f23c}} 
+\index{Graph@{Graph}!tspBTRec@{tspBTRec}}
+\index{tspBTRec@{tspBTRec}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{tspBTRec()}{tspBTRec()}}
+{\footnotesize\ttfamily void Graph\+::tsp\+BTRec (\begin{DoxyParamCaption}\item[{unsigned int}]{n,  }\item[{unsigned int}]{cur\+Index,  }\item[{unsigned int}]{cur\+Dist,  }\item[{unsigned int}]{cur\+Path\mbox{[}$\,$\mbox{]},  }\item[{unsigned int \&}]{min\+Dist,  }\item[{unsigned int}]{path\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Recursive function for the backtracking approach to solve the Traveling Salesman Problem. 
+
+Solves the Traveling Salesman Problem (TSP) using backtracking. This function recursively finds the shortest Hamiltonian cycle (closed path) in a graph by exploring all possible paths and backtracking when a path becomes longer than the current minimum distance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The number of nodes. \\
+\hline
+{\em cur\+Index} & The current index in the path. \\
+\hline
+{\em cur\+Dist} & The current distance. \\
+\hline
+{\em cur\+Path} & The current path. \\
+\hline
+{\em min\+Dist} & The minimum distance. \\
+\hline
+{\em path} & The array to store the path.\\
+\hline
+{\em n} & The number of nodes in the graph. \\
+\hline
+{\em cur\+Index} & The index of the current node being considered. \\
+\hline
+{\em cur\+Dist} & The current distance traveled. \\
+\hline
+{\em cur\+Path} & An array representing the current path being constructed. \\
+\hline
+{\em min\+Dist} & The minimum distance found so far. \\
+\hline
+{\em path} & An array to store the best path found. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_graph_aa5a56df7d8b0a08b6def3c21d4308577}\label{class_graph_aa5a56df7d8b0a08b6def3c21d4308577}} 
+\index{Graph@{Graph}!nodes@{nodes}}
+\index{nodes@{nodes}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{nodes}{nodes}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{structnode}{node}}$>$ Graph\+::nodes}
+
+The length of the best path found so far. The nodes in the graph. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_graph_8h}{Graph.\+h}}\item 
+Graph.\+cpp\end{DoxyCompactItemize}

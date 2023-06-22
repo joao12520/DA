@@ -1,0 +1,144 @@
+\hypertarget{class_gestor}{}\doxysection{Gestor Class Reference}
+\label{class_gestor}\index{Gestor@{Gestor}}
+
+
+The \mbox{\hyperlink{class_gestor}{Gestor}} class provides functions to manage graphs and perform operations on them.  
+
+
+
+
+{\ttfamily \#include $<$Gestor.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_gestor_ae455c8386c4b25357a8c150f0c1b91b8}{final\+Weight}} (\mbox{\hyperlink{class_graph}{Graph}} g, vector$<$ int $>$ path)
+\begin{DoxyCompactList}\small\item\em Calculates the total weight of a given path in a graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graph}{Graph}} \mbox{\hyperlink{class_gestor_acf1c3480d62bc18f1df799db040fdff3}{read\+Small\+Network}} (const string \&filename)
+\begin{DoxyCompactList}\small\item\em Reads a small network from a file and constructs a graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graph}{Graph}} \mbox{\hyperlink{class_gestor_ab46aa5328e782b0a6ed4e48a312a85f7}{read\+Nodes}} (const string \&filename)
+\begin{DoxyCompactList}\small\item\em Reads nodes from a file and constructs a graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graph}{Graph}} \mbox{\hyperlink{class_gestor_a64af0aca81fa03a9e4fefee3d2433f29}{read\+Edges}} (const string \&filename, \mbox{\hyperlink{class_graph}{Graph}} graph)
+\begin{DoxyCompactList}\small\item\em Reads edges from a file and adds them to the given graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graph}{Graph}} \mbox{\hyperlink{class_gestor_a3590a6f26f88f536ed07f97bb50b7e18}{create\+Graph}} (int n)
+\begin{DoxyCompactList}\small\item\em Creates a random graph with the specified number of nodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_gestor}{Gestor}} class provides functions to manage graphs and perform operations on them. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_gestor_a3590a6f26f88f536ed07f97bb50b7e18}\label{class_gestor_a3590a6f26f88f536ed07f97bb50b7e18}} 
+\index{Gestor@{Gestor}!createGraph@{createGraph}}
+\index{createGraph@{createGraph}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{createGraph()}{createGraph()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graph}{Graph}} Gestor\+::create\+Graph (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Creates a random graph with the specified number of nodes. 
+
+Creates a random graph with n nodes and random edges.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The number of nodes in the graph. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The randomly generated graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_ae455c8386c4b25357a8c150f0c1b91b8}\label{class_gestor_ae455c8386c4b25357a8c150f0c1b91b8}} 
+\index{Gestor@{Gestor}!finalWeight@{finalWeight}}
+\index{finalWeight@{finalWeight}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{finalWeight()}{finalWeight()}}
+{\footnotesize\ttfamily double Gestor\+::final\+Weight (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_graph}{Graph}}}]{g,  }\item[{vector$<$ int $>$}]{order\+Nodes }\end{DoxyParamCaption})}
+
+
+
+Calculates the total weight of a given path in a graph. 
+
+Calculates the total weight of the given order of nodes in the graph.
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & The graph. \\
+\hline
+{\em path} & The path represented by a vector of node IDs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The total weight of the given path.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em g} & The graph. \\
+\hline
+{\em order\+Nodes} & The order of nodes to visit. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The total weight of the given order of nodes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_a64af0aca81fa03a9e4fefee3d2433f29}\label{class_gestor_a64af0aca81fa03a9e4fefee3d2433f29}} 
+\index{Gestor@{Gestor}!readEdges@{readEdges}}
+\index{readEdges@{readEdges}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{readEdges()}{readEdges()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graph}{Graph}} Gestor\+::read\+Edges (\begin{DoxyParamCaption}\item[{const string \&}]{filename,  }\item[{\mbox{\hyperlink{class_graph}{Graph}}}]{graph }\end{DoxyParamCaption})}
+
+
+
+Reads edges from a file and adds them to the given graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file containing the edge data. \\
+\hline
+{\em graph} & The graph to add the edges to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The modified graph with the added edges. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_ab46aa5328e782b0a6ed4e48a312a85f7}\label{class_gestor_ab46aa5328e782b0a6ed4e48a312a85f7}} 
+\index{Gestor@{Gestor}!readNodes@{readNodes}}
+\index{readNodes@{readNodes}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{readNodes()}{readNodes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graph}{Graph}} Gestor\+::read\+Nodes (\begin{DoxyParamCaption}\item[{const string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Reads nodes from a file and constructs a graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file containing the node data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The constructed graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_acf1c3480d62bc18f1df799db040fdff3}\label{class_gestor_acf1c3480d62bc18f1df799db040fdff3}} 
+\index{Gestor@{Gestor}!readSmallNetwork@{readSmallNetwork}}
+\index{readSmallNetwork@{readSmallNetwork}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{readSmallNetwork()}{readSmallNetwork()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graph}{Graph}} Gestor\+::read\+Small\+Network (\begin{DoxyParamCaption}\item[{const string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Reads a small network from a file and constructs a graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file containing the network data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The constructed graph. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_gestor_8h}{Gestor.\+h}}\item 
+Gestor.\+cpp\end{DoxyCompactItemize}

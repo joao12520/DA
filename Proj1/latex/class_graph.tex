@@ -1,0 +1,157 @@
+\hypertarget{class_graph}{}\doxysection{Graph Class Reference}
+\label{class_graph}\index{Graph@{Graph}}
+
+
+The \mbox{\hyperlink{class_graph}{Graph}} class represents a graph of \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} and \mbox{\hyperlink{class_path___edge}{Path\+\_\+\+Edge}} objects.  
+
+
+
+
+{\ttfamily \#include $<$Graph.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_graph_adabef39071a710a0555b07bcfca62232}{add\+Vertex}} (\mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} \&station)
+\begin{DoxyCompactList}\small\item\em Adds a \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} to the graph. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_graph_a09f0d3f72e06704ce8f774b509578489}{add\+Edge}} (int source, int dest, \mbox{\hyperlink{class_path___edge}{Path\+\_\+\+Edge}} \&edge)
+\begin{DoxyCompactList}\small\item\em Adds a \mbox{\hyperlink{class_path___edge}{Path\+\_\+\+Edge}} to the graph. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} $>$ \& \mbox{\hyperlink{class_graph_aba9e9d74fca32b7669754fc30de93b19}{get\+Vertexs}} ()
+\begin{DoxyCompactList}\small\item\em Gets the vector of \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} objects representing the vertices of the graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a82a3cc1bbe67e97ceead8deef2975aa1}{bfs\+Connected\+Paths}} (int code)
+\begin{DoxyCompactList}\small\item\em Performs a breadth-\/first search to find all connected paths from a source vertex. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_graph_a374bd2b09bdd3fb1cff14ca71aa20fc1}{bfs\+Max\+Flow}} (int source, int dest, vector$<$ int $>$ \&parent)
+\begin{DoxyCompactList}\small\item\em Performs a breadth-\/first search between a source vertex and a destination vertex and finds an augmenting path. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_graph_a4189d1514d7b041e0a12903108e7db31}{path\+Is\+Possible}} (int source, int dest)
+\begin{DoxyCompactList}\small\item\em Checks if a path exists between a source vertex and a destination vertex. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_a01e121d9bd2be8969a1ad4a08d4f53ef}\label{class_graph_a01e121d9bd2be8969a1ad4a08d4f53ef}} 
+void {\bfseries reset\+Residuals} ()
+\begin{DoxyCompactList}\small\item\em Resets the residual capacity of all edges in the graph to its original capacity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_a244d99ed57dcd9ef90eedbe72e0d4686}\label{class_graph_a244d99ed57dcd9ef90eedbe72e0d4686}} 
+vector$<$ \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} $>$ {\bfseries vertexs}
+\begin{DoxyCompactList}\small\item\em A vector of \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} objects representing the vertices of the graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_graph}{Graph}} class represents a graph of \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} and \mbox{\hyperlink{class_path___edge}{Path\+\_\+\+Edge}} objects. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_a09f0d3f72e06704ce8f774b509578489}\label{class_graph_a09f0d3f72e06704ce8f774b509578489}} 
+\index{Graph@{Graph}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily bool Graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{int}]{source,  }\item[{int}]{dest,  }\item[{\mbox{\hyperlink{class_path___edge}{Path\+\_\+\+Edge}} \&}]{edge }\end{DoxyParamCaption})}
+
+
+
+Adds a \mbox{\hyperlink{class_path___edge}{Path\+\_\+\+Edge}} to the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The index of the source vertex of the edge. \\
+\hline
+{\em dest} & The index of the destination vertex of the edge. \\
+\hline
+{\em edge} & The \mbox{\hyperlink{class_path___edge}{Path\+\_\+\+Edge}} to be added to the graph. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the edge was added successfully, false if the indices are out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_adabef39071a710a0555b07bcfca62232}\label{class_graph_adabef39071a710a0555b07bcfca62232}} 
+\index{Graph@{Graph}!addVertex@{addVertex}}
+\index{addVertex@{addVertex}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addVertex()}{addVertex()}}
+{\footnotesize\ttfamily bool Graph\+::add\+Vertex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} \&}]{station }\end{DoxyParamCaption})}
+
+
+
+Adds a \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} to the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em station} & The \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} to be added to the graph. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the vertex was added successfully, false if it already exists in the graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a82a3cc1bbe67e97ceead8deef2975aa1}\label{class_graph_a82a3cc1bbe67e97ceead8deef2975aa1}} 
+\index{Graph@{Graph}!bfsConnectedPaths@{bfsConnectedPaths}}
+\index{bfsConnectedPaths@{bfsConnectedPaths}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{bfsConnectedPaths()}{bfsConnectedPaths()}}
+{\footnotesize\ttfamily void Graph\+::bfs\+Connected\+Paths (\begin{DoxyParamCaption}\item[{int}]{code }\end{DoxyParamCaption})}
+
+
+
+Performs a breadth-\/first search to find all connected paths from a source vertex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & The index of the source vertex. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a374bd2b09bdd3fb1cff14ca71aa20fc1}\label{class_graph_a374bd2b09bdd3fb1cff14ca71aa20fc1}} 
+\index{Graph@{Graph}!bfsMaxFlow@{bfsMaxFlow}}
+\index{bfsMaxFlow@{bfsMaxFlow}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{bfsMaxFlow()}{bfsMaxFlow()}}
+{\footnotesize\ttfamily int Graph\+::bfs\+Max\+Flow (\begin{DoxyParamCaption}\item[{int}]{source,  }\item[{int}]{dest,  }\item[{vector$<$ int $>$ \&}]{parent }\end{DoxyParamCaption})}
+
+
+
+Performs a breadth-\/first search between a source vertex and a destination vertex and finds an augmenting path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The index of the source vertex. \\
+\hline
+{\em dest} & The index of the destination vertex. \\
+\hline
+{\em parent} & A vector to store the parent of each vertex in the path found. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if a path was found, -\/1 if no path was found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_aba9e9d74fca32b7669754fc30de93b19}\label{class_graph_aba9e9d74fca32b7669754fc30de93b19}} 
+\index{Graph@{Graph}!getVertexs@{getVertexs}}
+\index{getVertexs@{getVertexs}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getVertexs()}{getVertexs()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} $>$ \& Graph\+::get\+Vertexs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the vector of \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} objects representing the vertices of the graph. 
+
+\begin{DoxyReturn}{Returns}
+The vector of \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} objects representing the vertices of the graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a4189d1514d7b041e0a12903108e7db31}\label{class_graph_a4189d1514d7b041e0a12903108e7db31}} 
+\index{Graph@{Graph}!pathIsPossible@{pathIsPossible}}
+\index{pathIsPossible@{pathIsPossible}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{pathIsPossible()}{pathIsPossible()}}
+{\footnotesize\ttfamily bool Graph\+::path\+Is\+Possible (\begin{DoxyParamCaption}\item[{int}]{source,  }\item[{int}]{dest }\end{DoxyParamCaption})}
+
+
+
+Checks if a path exists between a source vertex and a destination vertex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The index of the source vertex. \\
+\hline
+{\em dest} & The index of the destination vertex. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if a path exists between the two vertices, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_graph_8h}{Graph.\+h}}\item 
+Graph.\+cpp\end{DoxyCompactItemize}

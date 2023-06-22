@@ -1,0 +1,352 @@
+\hypertarget{class_gestor}{}\doxysection{Gestor Class Reference}
+\label{class_gestor}\index{Gestor@{Gestor}}
+
+
+Class responsible for managing the railway stations and network.  
+
+
+
+
+{\ttfamily \#include $<$Gestor.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_gestor_ab6ea4e8f7e4239215602b7f4a1dd3e4d}{read\+Stations}} (const string \&stationsfilename)
+\begin{DoxyCompactList}\small\item\em Reads the stations from a file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gestor_aa8f699011139663c8804332c7a6b6d93}{read\+Network}} (const string \&networkfilename)
+\begin{DoxyCompactList}\small\item\em Reads the railway network from a file. \end{DoxyCompactList}\item 
+tab\+HStation \mbox{\hyperlink{class_gestor_af01118ca5f9d98813140aa37075be6c2}{get\+Stations}} ()
+\begin{DoxyCompactList}\small\item\em Returns the stations hash table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graph}{Graph}} \& \mbox{\hyperlink{class_gestor_a3e6d87a6eda8f4fe2db7bd06a0d1c9f1}{get\+Network}} ()
+\begin{DoxyCompactList}\small\item\em Returns the railway network. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_gestor_a6ac28379085c662972e5ea9c588913f8}{path\+Is\+Ok}} (string source, string dest)
+\begin{DoxyCompactList}\small\item\em Checks if a path is possible between two stations. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_gestor_af015f0a01b2adbb538a4d3260f471535}{edmonds\+Karp}} (string source, string dest)
+\begin{DoxyCompactList}\small\item\em Runs the Edmonds-\/\+Karp algorithm to calculate the maximum flow between two stations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gestor_ae9f648aa580bfc4a2f9176d3f4ef6b72}{assert\+Flow}} (int flow, int parent, int source)
+\begin{DoxyCompactList}\small\item\em Asserts that the calculated flow, parent and cost arrays for a given source and destination. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gestor_aa8fd3247d7dcf4cd1d3a422005458e76}{top\+KDis}} (unsigned int k)
+\begin{DoxyCompactList}\small\item\em Prints the top k stations with highest average distance to other stations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gestor_a769e9867f15de7fac1d3b3f182142aab}{top\+KMuni}} (unsigned int k)
+\begin{DoxyCompactList}\small\item\em Prints the top k municipalities with highest average distance to other stations within the same municipality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gestor_a64111c6b91dc7eb3843a89e3951e61e7}{cap\+Station}} (const string \&station)
+\begin{DoxyCompactList}\small\item\em Prints the maximum flow that can arrive at a given station considering all possible paths. \end{DoxyCompactList}\item 
+pair$<$ int, int $>$ \mbox{\hyperlink{class_gestor_ac8b23580d890b1cb0010e4816e0e3f00}{edmonds\+Karp\+WCost}} (string source, string dest)
+\begin{DoxyCompactList}\small\item\em Calculates the maximum flow between a source and a destination and the minimum cost associated while maintaining the service. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gestor_a6e20c12e9f72a86b4620819d1133a33b}{max\+Flow\+All\+Pairs}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the maximum flow between all station pairs in the network and prints the result for each pair. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_gestor_a47639e7e475157424f2d324a35991dce}{assert\+Flow\+WCost}} (int flow, int parent, int child, int cost)
+\begin{DoxyCompactList}\small\item\em Asserts that the calculated flow, parent and cost arrays for a given source and destination are correct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gestor_a9d72df72319645ff6346dcd2da81ae94}{compare\+Reliability}} (int k, vector$<$ pair$<$ string, string $>$ $>$ edges\+To\+Cut)
+\begin{DoxyCompactList}\small\item\em Compares the reliability of the network before and after cutting a set of edges. \end{DoxyCompactList}\item 
+map$<$ std\+::string, int $>$ \mbox{\hyperlink{class_gestor_a23ce4fb965110dee726dfb9591e09ca1}{flow\+Per\+Station}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the flow value for each station in the network. \end{DoxyCompactList}\item 
+map$<$ std\+::string, int $>$ \mbox{\hyperlink{class_gestor_a9660b1d21e9f20619349632df1acb30d}{flow\+Per\+Station\+Rel}} (vector$<$ pair$<$ string, string $>$ $>$ edges\+To\+Cut)
+\begin{DoxyCompactList}\small\item\em Calculates the flow value for each station in the network after cutting a set of edges. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_gestor_a027873666d015f066af416be51970966}{reliability\+Check}} (vector$<$ pair$<$ string, string $>$ $>$ edges\+To\+Cut)
+\begin{DoxyCompactList}\small\item\em Sets the given edges to unavailable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gestor_a71e2794779f817d62ada8981c889c36a}{set\+OK}} ()
+\begin{DoxyCompactList}\small\item\em Sets all the edges in the network to be available. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class responsible for managing the railway stations and network. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_gestor_ae9f648aa580bfc4a2f9176d3f4ef6b72}\label{class_gestor_ae9f648aa580bfc4a2f9176d3f4ef6b72}} 
+\index{Gestor@{Gestor}!assertFlow@{assertFlow}}
+\index{assertFlow@{assertFlow}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{assertFlow()}{assertFlow()}}
+{\footnotesize\ttfamily void Gestor\+::assert\+Flow (\begin{DoxyParamCaption}\item[{int}]{flow,  }\item[{int}]{parent,  }\item[{int}]{source }\end{DoxyParamCaption})}
+
+
+
+Asserts that the calculated flow, parent and cost arrays for a given source and destination. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flow} & Maximum flow value. \\
+\hline
+{\em parent} & Parent node of the maximum flow. \\
+\hline
+{\em source} & Name of the departure station. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gestor_a47639e7e475157424f2d324a35991dce}\label{class_gestor_a47639e7e475157424f2d324a35991dce}} 
+\index{Gestor@{Gestor}!assertFlowWCost@{assertFlowWCost}}
+\index{assertFlowWCost@{assertFlowWCost}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{assertFlowWCost()}{assertFlowWCost()}}
+{\footnotesize\ttfamily int Gestor\+::assert\+Flow\+WCost (\begin{DoxyParamCaption}\item[{int}]{flow,  }\item[{int}]{parent,  }\item[{int}]{child,  }\item[{int}]{cost }\end{DoxyParamCaption})}
+
+
+
+Asserts that the calculated flow, parent and cost arrays for a given source and destination are correct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flow} & The calculated flow value \\
+\hline
+{\em parent} & The parent array of the path \\
+\hline
+{\em child} & The index of the destination station in the graph adjacency list \\
+\hline
+{\em cost} & The calculated cost value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The added cost of the path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_a64111c6b91dc7eb3843a89e3951e61e7}\label{class_gestor_a64111c6b91dc7eb3843a89e3951e61e7}} 
+\index{Gestor@{Gestor}!capStation@{capStation}}
+\index{capStation@{capStation}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{capStation()}{capStation()}}
+{\footnotesize\ttfamily void Gestor\+::cap\+Station (\begin{DoxyParamCaption}\item[{const string \&}]{station }\end{DoxyParamCaption})}
+
+
+
+Prints the maximum flow that can arrive at a given station considering all possible paths. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em station} & The name of the station to calculate the maximum flow \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gestor_a9d72df72319645ff6346dcd2da81ae94}\label{class_gestor_a9d72df72319645ff6346dcd2da81ae94}} 
+\index{Gestor@{Gestor}!compareReliability@{compareReliability}}
+\index{compareReliability@{compareReliability}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{compareReliability()}{compareReliability()}}
+{\footnotesize\ttfamily void Gestor\+::compare\+Reliability (\begin{DoxyParamCaption}\item[{int}]{k,  }\item[{vector$<$ pair$<$ string, string $>$ $>$}]{edges\+To\+Cut }\end{DoxyParamCaption})}
+
+
+
+Compares the reliability of the network before and after cutting a set of edges. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The number of edges to cut \\
+\hline
+{\em edges\+To\+Cut} & The edges to cut \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gestor_af015f0a01b2adbb538a4d3260f471535}\label{class_gestor_af015f0a01b2adbb538a4d3260f471535}} 
+\index{Gestor@{Gestor}!edmondsKarp@{edmondsKarp}}
+\index{edmondsKarp@{edmondsKarp}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{edmondsKarp()}{edmondsKarp()}}
+{\footnotesize\ttfamily int Gestor\+::edmonds\+Karp (\begin{DoxyParamCaption}\item[{string}]{source,  }\item[{string}]{dest }\end{DoxyParamCaption})}
+
+
+
+Runs the Edmonds-\/\+Karp algorithm to calculate the maximum flow between two stations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Name of the departure station. \\
+\hline
+{\em dest} & Name of the arrival station. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Maximum flow value between the stations. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_ac8b23580d890b1cb0010e4816e0e3f00}\label{class_gestor_ac8b23580d890b1cb0010e4816e0e3f00}} 
+\index{Gestor@{Gestor}!edmondsKarpWCost@{edmondsKarpWCost}}
+\index{edmondsKarpWCost@{edmondsKarpWCost}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{edmondsKarpWCost()}{edmondsKarpWCost()}}
+{\footnotesize\ttfamily pair$<$ int, int $>$ Gestor\+::edmonds\+Karp\+WCost (\begin{DoxyParamCaption}\item[{string}]{source,  }\item[{string}]{dest }\end{DoxyParamCaption})}
+
+
+
+Calculates the maximum flow between a source and a destination and the minimum cost associated while maintaining the service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The name of the source station \\
+\hline
+{\em dest} & The name of the destination station \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair with the maximum flow value and the corresponding cost 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_a23ce4fb965110dee726dfb9591e09ca1}\label{class_gestor_a23ce4fb965110dee726dfb9591e09ca1}} 
+\index{Gestor@{Gestor}!flowPerStation@{flowPerStation}}
+\index{flowPerStation@{flowPerStation}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{flowPerStation()}{flowPerStation()}}
+{\footnotesize\ttfamily map$<$ std\+::string, int $>$ Gestor\+::flow\+Per\+Station (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates the flow value for each station in the network. 
+
+\begin{DoxyReturn}{Returns}
+A map with each station name as key and its corresponding flow value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_a9660b1d21e9f20619349632df1acb30d}\label{class_gestor_a9660b1d21e9f20619349632df1acb30d}} 
+\index{Gestor@{Gestor}!flowPerStationRel@{flowPerStationRel}}
+\index{flowPerStationRel@{flowPerStationRel}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{flowPerStationRel()}{flowPerStationRel()}}
+{\footnotesize\ttfamily map$<$ std\+::string, int $>$ Gestor\+::flow\+Per\+Station\+Rel (\begin{DoxyParamCaption}\item[{vector$<$ pair$<$ string, string $>$ $>$}]{edges\+To\+Cut }\end{DoxyParamCaption})}
+
+
+
+Calculates the flow value for each station in the network after cutting a set of edges. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges\+To\+Cut} & The edges to cut \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A map with each station name as key and its corresponding flow value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_a3e6d87a6eda8f4fe2db7bd06a0d1c9f1}\label{class_gestor_a3e6d87a6eda8f4fe2db7bd06a0d1c9f1}} 
+\index{Gestor@{Gestor}!getNetwork@{getNetwork}}
+\index{getNetwork@{getNetwork}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{getNetwork()}{getNetwork()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graph}{Graph}} \& Gestor\+::get\+Network (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the railway network. 
+
+\begin{DoxyReturn}{Returns}
+Railway network. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_af01118ca5f9d98813140aa37075be6c2}\label{class_gestor_af01118ca5f9d98813140aa37075be6c2}} 
+\index{Gestor@{Gestor}!getStations@{getStations}}
+\index{getStations@{getStations}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{getStations()}{getStations()}}
+{\footnotesize\ttfamily tab\+HStation Gestor\+::get\+Stations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the stations hash table. 
+
+\begin{DoxyReturn}{Returns}
+Stations hash table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_a6e20c12e9f72a86b4620819d1133a33b}\label{class_gestor_a6e20c12e9f72a86b4620819d1133a33b}} 
+\index{Gestor@{Gestor}!maxFlowAllPairs@{maxFlowAllPairs}}
+\index{maxFlowAllPairs@{maxFlowAllPairs}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{maxFlowAllPairs()}{maxFlowAllPairs()}}
+{\footnotesize\ttfamily void Gestor\+::max\+Flow\+All\+Pairs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates the maximum flow between all station pairs in the network and prints the result for each pair. 
+
+\mbox{\Hypertarget{class_gestor_a6ac28379085c662972e5ea9c588913f8}\label{class_gestor_a6ac28379085c662972e5ea9c588913f8}} 
+\index{Gestor@{Gestor}!pathIsOk@{pathIsOk}}
+\index{pathIsOk@{pathIsOk}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{pathIsOk()}{pathIsOk()}}
+{\footnotesize\ttfamily bool Gestor\+::path\+Is\+Ok (\begin{DoxyParamCaption}\item[{string}]{source,  }\item[{string}]{dest }\end{DoxyParamCaption})}
+
+
+
+Checks if a path is possible between two stations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Name of the departure station. \\
+\hline
+{\em dest} & Name of the arrival station. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if there is a path between the stations, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_aa8f699011139663c8804332c7a6b6d93}\label{class_gestor_aa8f699011139663c8804332c7a6b6d93}} 
+\index{Gestor@{Gestor}!readNetwork@{readNetwork}}
+\index{readNetwork@{readNetwork}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{readNetwork()}{readNetwork()}}
+{\footnotesize\ttfamily void Gestor\+::read\+Network (\begin{DoxyParamCaption}\item[{const string \&}]{networkfilename }\end{DoxyParamCaption})}
+
+
+
+Reads the railway network from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em networkfilename} & Name of the file containing the railway network information. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gestor_ab6ea4e8f7e4239215602b7f4a1dd3e4d}\label{class_gestor_ab6ea4e8f7e4239215602b7f4a1dd3e4d}} 
+\index{Gestor@{Gestor}!readStations@{readStations}}
+\index{readStations@{readStations}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{readStations()}{readStations()}}
+{\footnotesize\ttfamily void Gestor\+::read\+Stations (\begin{DoxyParamCaption}\item[{const string \&}]{stationsfilename }\end{DoxyParamCaption})}
+
+
+
+Reads the stations from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stationsfilename} & Name of the file containing the station information. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gestor_a027873666d015f066af416be51970966}\label{class_gestor_a027873666d015f066af416be51970966}} 
+\index{Gestor@{Gestor}!reliabilityCheck@{reliabilityCheck}}
+\index{reliabilityCheck@{reliabilityCheck}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{reliabilityCheck()}{reliabilityCheck()}}
+{\footnotesize\ttfamily int Gestor\+::reliability\+Check (\begin{DoxyParamCaption}\item[{vector$<$ pair$<$ string, string $>$ $>$}]{edges\+To\+Cut }\end{DoxyParamCaption})}
+
+
+
+Sets the given edges to unavailable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges\+To\+Cut} & The edges to cut \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The reliability value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_a71e2794779f817d62ada8981c889c36a}\label{class_gestor_a71e2794779f817d62ada8981c889c36a}} 
+\index{Gestor@{Gestor}!setOK@{setOK}}
+\index{setOK@{setOK}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{setOK()}{setOK()}}
+{\footnotesize\ttfamily void Gestor\+::set\+OK (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets all the edges in the network to be available. 
+
+\mbox{\Hypertarget{class_gestor_aa8fd3247d7dcf4cd1d3a422005458e76}\label{class_gestor_aa8fd3247d7dcf4cd1d3a422005458e76}} 
+\index{Gestor@{Gestor}!topKDis@{topKDis}}
+\index{topKDis@{topKDis}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{topKDis()}{topKDis()}}
+{\footnotesize\ttfamily void Gestor\+::top\+KDis (\begin{DoxyParamCaption}\item[{unsigned int}]{k }\end{DoxyParamCaption})}
+
+
+
+Prints the top k stations with highest average distance to other stations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The number of top stations to print \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gestor_a769e9867f15de7fac1d3b3f182142aab}\label{class_gestor_a769e9867f15de7fac1d3b3f182142aab}} 
+\index{Gestor@{Gestor}!topKMuni@{topKMuni}}
+\index{topKMuni@{topKMuni}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{topKMuni()}{topKMuni()}}
+{\footnotesize\ttfamily void Gestor\+::top\+KMuni (\begin{DoxyParamCaption}\item[{unsigned int}]{k }\end{DoxyParamCaption})}
+
+
+
+Prints the top k municipalities with highest average distance to other stations within the same municipality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The number of top municipalities to print \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_gestor_8h}{Gestor.\+h}}\item 
+Gestor.\+cpp\end{DoxyCompactItemize}

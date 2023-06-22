@@ -1,0 +1,3 @@
+/Users/rodrigofigueiredo/Faculdade/2ºA-2ºS/DesAlg/DAProj1/cmake-build-debug/CMakeFiles/projDA.dir
+/Users/rodrigofigueiredo/Faculdade/2ºA-2ºS/DesAlg/DAProj1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/rodrigofigueiredo/Faculdade/2ºA-2ºS/DesAlg/DAProj1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,81 @@
+\hypertarget{_gestor_8h_source}{}\doxysection{Gestor.\+h}
+\mbox{\hyperlink{_gestor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ PROJDA\_GESTOR\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ PROJDA\_GESTOR\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <unordered\_set>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_station___vertex_8h}{Station\_Vertex.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_graph_8h}{Graph.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_station_hash}{StationHash}}\ \{}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ TODO}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ operator()\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{class_station___vertex}{Station\_Vertex}}\&\ a)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ sum\ =\ 0;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ v\ =\ a.\mbox{\hyperlink{class_station___vertex_a87a299107f8a0b97f31b1559fbc12f07}{getName}}();}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ i\ :\ v)\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ sum\ +=\ i;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sum;}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_station_equals}{StationEquals}}\ \{}
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ TODO}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator()\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{class_station___vertex}{Station\_Vertex}}\&\ a1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_station___vertex}{Station\_Vertex}}\&\ a2)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ a1\ ==\ a2;}
+\DoxyCodeLine{00043\ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ unordered\_set<Station\_Vertex,\ StationHash,\ StationEquals>\ tabHStation;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_gestor}{Gestor}}\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ tabHStation\ stations;\ }
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_graph}{Graph}}\ network;\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gestor_ab6ea4e8f7e4239215602b7f4a1dd3e4d}{readStations}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ stationsfilename);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gestor_aa8f699011139663c8804332c7a6b6d93}{readNetwork}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ networkfilename);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00071\ \ \ \ \ tabHStation\ \mbox{\hyperlink{class_gestor_af01118ca5f9d98813140aa37075be6c2}{getStations}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{class_graph}{Graph}}\&\ \mbox{\hyperlink{class_gestor_a3e6d87a6eda8f4fe2db7bd06a0d1c9f1}{getNetwork}}();}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_gestor_a6ac28379085c662972e5ea9c588913f8}{pathIsOk}}(\textcolor{keywordtype}{string}\ source,\ \textcolor{keywordtype}{string}\ dest);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_gestor_af015f0a01b2adbb538a4d3260f471535}{edmondsKarp}}(\textcolor{keywordtype}{string}\ source,\ \textcolor{keywordtype}{string}\ dest);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gestor_ae9f648aa580bfc4a2f9176d3f4ef6b72}{assertFlow}}(\textcolor{keywordtype}{int}\ flow,\ \textcolor{keywordtype}{int}\ parent,\ \textcolor{keywordtype}{int}\ source);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gestor_aa8fd3247d7dcf4cd1d3a422005458e76}{topKDis}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ k);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gestor_a769e9867f15de7fac1d3b3f182142aab}{topKMuni}}(\textcolor{keywordtype}{unsigned}\ \ \textcolor{keywordtype}{int}\ k);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gestor_a64111c6b91dc7eb3843a89e3951e61e7}{capStation}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ station);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00131\ \ \ \ \ pair<int,int>\ \mbox{\hyperlink{class_gestor_ac8b23580d890b1cb0010e4816e0e3f00}{edmondsKarpWCost}}(\textcolor{keywordtype}{string}\ source,\ \textcolor{keywordtype}{string}\ dest);}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gestor_a6e20c12e9f72a86b4620819d1133a33b}{maxFlowAllPairs}}();}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_gestor_a47639e7e475157424f2d324a35991dce}{assertFlowWCost}}(\textcolor{keywordtype}{int}\ flow,\ \textcolor{keywordtype}{int}\ parent,\ \textcolor{keywordtype}{int}\ child,\ \textcolor{keywordtype}{int}\ cost);}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gestor_a9d72df72319645ff6346dcd2da81ae94}{compareReliability}}(\textcolor{keywordtype}{int}\ k,\ vector<pair<string,string>>\ edgesToCut);}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00163\ \ \ \ \ map<std::string,\ int>\ \mbox{\hyperlink{class_gestor_a23ce4fb965110dee726dfb9591e09ca1}{flowPerStation}}();}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00171\ \ \ \ \ map<std::string,\ int>\ \mbox{\hyperlink{class_gestor_a9660b1d21e9f20619349632df1acb30d}{flowPerStationRel}}(vector<pair<string,string>>\ edgesToCut);}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_gestor_a027873666d015f066af416be51970966}{reliabilityCheck}}(vector<pair<string,string>>\ edgesToCut);}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gestor_a71e2794779f817d62ada8981c889c36a}{setOK}}();}
+\DoxyCodeLine{00186\ \};}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//PROJDA\_GESTOR\_H}}
+
+\end{DoxyCode}

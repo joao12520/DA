@@ -1,0 +1,64 @@
+\hypertarget{_station___vertex_8h_source}{}\doxysection{Station\+\_\+\+Vertex.\+h}
+\mbox{\hyperlink{_station___vertex_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ PROJDA\_STATION\_VERTEX\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ PROJDA\_STATION\_VERTEX\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_path___edge_8h}{Path\_Edge.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_station___vertex}{Station\_Vertex}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{string}\ name;\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{string}\ district;\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{string}\ municipality;\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{string}\ township;\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{string}\ line;\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ code;\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ dist;\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ visited\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ vector<Path\_Edge>\ \mbox{\hyperlink{class_station___vertex_a48469c55c1b95d6a00c5f01fe9415f59}{adj}};\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_station___vertex_a9d28e47458d5980ff6b86246072a7fa2}{Station\_Vertex}}(\textcolor{keywordtype}{string}\ name,\ \textcolor{keywordtype}{string}\ district\ =\ \textcolor{stringliteral}{"{}null"{}},\ \textcolor{keywordtype}{string}\ municipality\ =\ \textcolor{stringliteral}{"{}null"{}},\textcolor{keywordtype}{string}\ township\ =\ \textcolor{stringliteral}{"{}null"{}},\ \textcolor{keywordtype}{string}\ line\ =\ \textcolor{stringliteral}{"{}null"{}},\ \textcolor{keywordtype}{int}\ code\ =\ -\/1)\{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ this-\/>name\ =\ name;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ this-\/>district\ =\ district;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ this-\/>municipality\ =\ municipality;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ this-\/>township\ =\ township;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ this-\/>line\ =\ line;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ this-\/>code\ =\ code;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ this-\/>dist\ =\ -\/1;}
+\DoxyCodeLine{00047\ \ \ \ \ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_station___vertex_a87a299107f8a0b97f31b1559fbc12f07}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_station___vertex_af65f7598ae620d1eed7fd2025b93086d}{getDistrict}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_station___vertex_a3dfbd8967bb652dd8c593f123a0fbf8a}{getMunicipality}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_station___vertex_aa074913f2585a456fa84e55bf71532f3}{getTownship}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_station___vertex_a70479ad9f77943d92b2a1a943c441fc8}{getLine}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_station___vertex_a4b2bff60e11745aa65973d19df70df11}{getCode}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00089\ \ \ \ \ vector<Path\_Edge>\&\ \mbox{\hyperlink{class_station___vertex_aba574f879f4fb9439c2a2e4cffeba17e}{getAdj}}()\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_station___vertex_a48469c55c1b95d6a00c5f01fe9415f59}{adj}};\}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_station___vertex_a18f33f61c31f2560b83ccc48d1d6253f}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_station___vertex}{Station\_Vertex}}\&\ s2)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_station___vertex_a42a0d4344104dce895df2b225e2f90a2}{setVisited}}(\textcolor{keywordtype}{bool}\ vis);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_station___vertex_ae68fc0fac3bcbf1d90594fa6b95c4fc9}{setDist}}(\textcolor{keywordtype}{int}\ dist);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_station___vertex_a64a4536bbfec9b94d53d8c0d19e1f6eb}{getVisited}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_station___vertex_a0138b3540baf9d067101996dabb9831c}{getDist}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00121\ \};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//PROJDA\_STATION\_VERTEX\_H}}
+
+\end{DoxyCode}

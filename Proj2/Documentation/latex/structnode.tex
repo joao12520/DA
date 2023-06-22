@@ -1,0 +1,108 @@
+\hypertarget{structnode}{}\doxysection{node Struct Reference}
+\label{structnode}\index{node@{node}}
+
+
+Represents a node in the graph.  
+
+
+
+
+{\ttfamily \#include $<$Graph.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnode_a8ceaa10e39f74fdfdae30c68a50074e2}\label{structnode_a8ceaa10e39f74fdfdae30c68a50074e2}} 
+int {\bfseries id}
+\item 
+double \mbox{\hyperlink{structnode_aee49327a66a7457ede2f395a416a8c28}{lat}}
+\item 
+double \mbox{\hyperlink{structnode_a48d2c56610cffbfa3fd35ff66678b95e}{longi}}
+\item 
+bool \mbox{\hyperlink{structnode_a113d19d2ac29af9a9f75b20a41a5cc82}{visited}}
+\item 
+int \mbox{\hyperlink{structnode_a699ae6312819c96eb57b7d1c37543a64}{base}}
+\item 
+bool \mbox{\hyperlink{structnode_a74d6c466c83ec603745ed88a2d90af3e}{paired}}
+\item 
+int \mbox{\hyperlink{structnode_a2dd8650632f7856f09c367e6f21faba7}{pair}}
+\item 
+int \mbox{\hyperlink{structnode_a4b6f638c30225fbd90fe426e4456f791}{parent}}
+\item 
+bool \mbox{\hyperlink{structnode_a30b5b2b6816b0066aa69296852097858}{is\+Odd}}
+\item 
+bool \mbox{\hyperlink{structnode_aea9eb6204741d5a254f8d25248edc1d5}{is\+In\+Blossom}}
+\item 
+vector$<$ \mbox{\hyperlink{structedge}{edge}} $>$ \mbox{\hyperlink{structnode_a22fe2f5785d540bcbcb76665dc517a3d}{edges}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a node in the graph. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structnode_a699ae6312819c96eb57b7d1c37543a64}\label{structnode_a699ae6312819c96eb57b7d1c37543a64}} 
+\index{node@{node}!base@{base}}
+\index{base@{base}!node@{node}}
+\doxysubsubsection{\texorpdfstring{base}{base}}
+{\footnotesize\ttfamily int node\+::base}
+
+Flag indicating if the node has been visited. \mbox{\Hypertarget{structnode_a22fe2f5785d540bcbcb76665dc517a3d}\label{structnode_a22fe2f5785d540bcbcb76665dc517a3d}} 
+\index{node@{node}!edges@{edges}}
+\index{edges@{edges}!node@{node}}
+\doxysubsubsection{\texorpdfstring{edges}{edges}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{structedge}{edge}}$>$ node\+::edges}
+
+Flag indicating if the node is in a blossom. \mbox{\Hypertarget{structnode_aea9eb6204741d5a254f8d25248edc1d5}\label{structnode_aea9eb6204741d5a254f8d25248edc1d5}} 
+\index{node@{node}!isInBlossom@{isInBlossom}}
+\index{isInBlossom@{isInBlossom}!node@{node}}
+\doxysubsubsection{\texorpdfstring{isInBlossom}{isInBlossom}}
+{\footnotesize\ttfamily bool node\+::is\+In\+Blossom}
+
+Flag indicating if the node has odd degree. \mbox{\Hypertarget{structnode_a30b5b2b6816b0066aa69296852097858}\label{structnode_a30b5b2b6816b0066aa69296852097858}} 
+\index{node@{node}!isOdd@{isOdd}}
+\index{isOdd@{isOdd}!node@{node}}
+\doxysubsubsection{\texorpdfstring{isOdd}{isOdd}}
+{\footnotesize\ttfamily bool node\+::is\+Odd}
+
+The parent node. \mbox{\Hypertarget{structnode_aee49327a66a7457ede2f395a416a8c28}\label{structnode_aee49327a66a7457ede2f395a416a8c28}} 
+\index{node@{node}!lat@{lat}}
+\index{lat@{lat}!node@{node}}
+\doxysubsubsection{\texorpdfstring{lat}{lat}}
+{\footnotesize\ttfamily double node\+::lat}
+
+The ID of the node. \mbox{\Hypertarget{structnode_a48d2c56610cffbfa3fd35ff66678b95e}\label{structnode_a48d2c56610cffbfa3fd35ff66678b95e}} 
+\index{node@{node}!longi@{longi}}
+\index{longi@{longi}!node@{node}}
+\doxysubsubsection{\texorpdfstring{longi}{longi}}
+{\footnotesize\ttfamily double node\+::longi}
+
+The latitude of the node. \mbox{\Hypertarget{structnode_a2dd8650632f7856f09c367e6f21faba7}\label{structnode_a2dd8650632f7856f09c367e6f21faba7}} 
+\index{node@{node}!pair@{pair}}
+\index{pair@{pair}!node@{node}}
+\doxysubsubsection{\texorpdfstring{pair}{pair}}
+{\footnotesize\ttfamily int node\+::pair}
+
+Flag indicating if the node is paired. \mbox{\Hypertarget{structnode_a74d6c466c83ec603745ed88a2d90af3e}\label{structnode_a74d6c466c83ec603745ed88a2d90af3e}} 
+\index{node@{node}!paired@{paired}}
+\index{paired@{paired}!node@{node}}
+\doxysubsubsection{\texorpdfstring{paired}{paired}}
+{\footnotesize\ttfamily bool node\+::paired}
+
+The base node of the blossom. \mbox{\Hypertarget{structnode_a4b6f638c30225fbd90fe426e4456f791}\label{structnode_a4b6f638c30225fbd90fe426e4456f791}} 
+\index{node@{node}!parent@{parent}}
+\index{parent@{parent}!node@{node}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily int node\+::parent}
+
+The paired node. \mbox{\Hypertarget{structnode_a113d19d2ac29af9a9f75b20a41a5cc82}\label{structnode_a113d19d2ac29af9a9f75b20a41a5cc82}} 
+\index{node@{node}!visited@{visited}}
+\index{visited@{visited}!node@{node}}
+\doxysubsubsection{\texorpdfstring{visited}{visited}}
+{\footnotesize\ttfamily bool node\+::visited}
+
+The longitude of the node. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_graph_8h}{Graph.\+h}}\end{DoxyCompactItemize}

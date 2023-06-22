@@ -1,0 +1,33 @@
+\hypertarget{_gestor_8h}{}\doxysection{Gestor.\+h File Reference}
+\label{_gestor_8h}\index{Gestor.h@{Gestor.h}}
+
+
+Contains the declaration of the \mbox{\hyperlink{class_gestor}{Gestor}} class and its methods.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+set$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}Station\+\_\+\+Vertex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Graph.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$map$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_station_hash}{Station\+Hash}}
+\begin{DoxyCompactList}\small\item\em Hash function for the \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} structure. This struct defines the hash function for the \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} structure used in the tab\+HStation hash table. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_station_equals}{Station\+Equals}}
+\begin{DoxyCompactList}\small\item\em Equality function for the \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} structure. This struct defines the equality function for the \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} structure used in the tab\+HStation hash table. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_gestor}{Gestor}}
+\begin{DoxyCompactList}\small\item\em Class responsible for managing the railway stations and network. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_gestor_8h_af0394d31db729e33d1697962cc9644fb}\label{_gestor_8h_af0394d31db729e33d1697962cc9644fb}} 
+typedef unordered\+\_\+set$<$ \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}}, \mbox{\hyperlink{struct_station_hash}{Station\+Hash}}, \mbox{\hyperlink{struct_station_equals}{Station\+Equals}} $>$ {\bfseries tab\+HStation}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the declaration of the \mbox{\hyperlink{class_gestor}{Gestor}} class and its methods. 
+

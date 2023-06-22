@@ -1,0 +1,204 @@
+\hypertarget{class_path___edge}{}\doxysection{Path\+\_\+\+Edge Class Reference}
+\label{class_path___edge}\index{Path\_Edge@{Path\_Edge}}
+
+
+Represents an edge in a graph This class represents an edge in a graph. Each edge has a source point (pointA), a destination point (pointB), a capacity (the maximum flow it can support), a current flow, a residual capacity (the remaining capacity after some flow has been passed through the edge), and a service string (which describes the service provided by this edge).  
+
+
+
+
+{\ttfamily \#include $<$Path\+\_\+\+Edge.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_path___edge_af46479946250a8992ff2bf6829cf7462}{Path\+\_\+\+Edge}} (int source, int dest, int capacity, string service)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_path___edge}{Path\+\_\+\+Edge}} object with the specified parameters. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_path___edge_a6f500588a727020263f38bddeb91b78d}{get\+PointA}} ()
+\begin{DoxyCompactList}\small\item\em Getter of the source point of the edge. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_path___edge_a8c396550dec1ba539a420d3fbd0d0ea3}{get\+PointB}} ()
+\begin{DoxyCompactList}\small\item\em Getter of the destination point of the edge. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_path___edge_ae598a9aed060ba33c2a7c3c9997bb3bf}{is\+OK}} ()
+\begin{DoxyCompactList}\small\item\em Getter of the OK parameter associated with the edge. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_path___edge_ab163ff1ed5317a09eabbc48ab44bc831}{get\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em Getter of the capacity parameter. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_path___edge_a27e10db5694435bc78fb57e544208ca7}{get\+Flow}} ()
+\begin{DoxyCompactList}\small\item\em Getter of the flow parameter. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_path___edge_a29a52e7de6073e1b14d7953fb47581bf}{get\+Residual\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em Getter of the residual\+Capacity parameter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_path___edge_a052c5bc011219eaece809ed0ec282055}{set\+Residual}} (int residual)
+\begin{DoxyCompactList}\small\item\em Sets the parameter residual\+Capacity to the given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_path___edge_a34be176078d8d2a96566a7297dda4d20}{set\+Flow}} (int flow)
+\begin{DoxyCompactList}\small\item\em Sets the parameter flow to the given value. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_path___edge_af7af90d0b07485557dc9841e5cc21c8e}{get\+Service}} ()
+\begin{DoxyCompactList}\small\item\em Getter function of the service string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_path___edge_a51611c3d08b8aa76cf9af58298f613c2}{OK}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an edge in a graph This class represents an edge in a graph. Each edge has a source point (pointA), a destination point (pointB), a capacity (the maximum flow it can support), a current flow, a residual capacity (the remaining capacity after some flow has been passed through the edge), and a service string (which describes the service provided by this edge). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_path___edge_af46479946250a8992ff2bf6829cf7462}\label{class_path___edge_af46479946250a8992ff2bf6829cf7462}} 
+\index{Path\_Edge@{Path\_Edge}!Path\_Edge@{Path\_Edge}}
+\index{Path\_Edge@{Path\_Edge}!Path\_Edge@{Path\_Edge}}
+\doxysubsubsection{\texorpdfstring{Path\_Edge()}{Path\_Edge()}}
+{\footnotesize\ttfamily Path\+\_\+\+Edge\+::\+Path\+\_\+\+Edge (\begin{DoxyParamCaption}\item[{int}]{source,  }\item[{int}]{dest,  }\item[{int}]{capacity,  }\item[{string}]{service }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \mbox{\hyperlink{class_path___edge}{Path\+\_\+\+Edge}} object with the specified parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The source point of the edge \\
+\hline
+{\em dest} & The destination point of the edge \\
+\hline
+{\em capacity} & The maximum flow that the edge can support \\
+\hline
+{\em service} & The service provided by this edge \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_path___edge_ab163ff1ed5317a09eabbc48ab44bc831}\label{class_path___edge_ab163ff1ed5317a09eabbc48ab44bc831}} 
+\index{Path\_Edge@{Path\_Edge}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!Path\_Edge@{Path\_Edge}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily int Path\+\_\+\+Edge\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter of the capacity parameter. 
+
+\begin{DoxyReturn}{Returns}
+The capacity associated with the edge 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_path___edge_a27e10db5694435bc78fb57e544208ca7}\label{class_path___edge_a27e10db5694435bc78fb57e544208ca7}} 
+\index{Path\_Edge@{Path\_Edge}!getFlow@{getFlow}}
+\index{getFlow@{getFlow}!Path\_Edge@{Path\_Edge}}
+\doxysubsubsection{\texorpdfstring{getFlow()}{getFlow()}}
+{\footnotesize\ttfamily int Path\+\_\+\+Edge\+::get\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter of the flow parameter. 
+
+\begin{DoxyReturn}{Returns}
+The flow associated with the edge 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_path___edge_a6f500588a727020263f38bddeb91b78d}\label{class_path___edge_a6f500588a727020263f38bddeb91b78d}} 
+\index{Path\_Edge@{Path\_Edge}!getPointA@{getPointA}}
+\index{getPointA@{getPointA}!Path\_Edge@{Path\_Edge}}
+\doxysubsubsection{\texorpdfstring{getPointA()}{getPointA()}}
+{\footnotesize\ttfamily int Path\+\_\+\+Edge\+::get\+PointA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter of the source point of the edge. 
+
+\begin{DoxyReturn}{Returns}
+The source point of the edge 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_path___edge_a8c396550dec1ba539a420d3fbd0d0ea3}\label{class_path___edge_a8c396550dec1ba539a420d3fbd0d0ea3}} 
+\index{Path\_Edge@{Path\_Edge}!getPointB@{getPointB}}
+\index{getPointB@{getPointB}!Path\_Edge@{Path\_Edge}}
+\doxysubsubsection{\texorpdfstring{getPointB()}{getPointB()}}
+{\footnotesize\ttfamily int Path\+\_\+\+Edge\+::get\+PointB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter of the destination point of the edge. 
+
+\begin{DoxyReturn}{Returns}
+The destination point of the edge 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_path___edge_a29a52e7de6073e1b14d7953fb47581bf}\label{class_path___edge_a29a52e7de6073e1b14d7953fb47581bf}} 
+\index{Path\_Edge@{Path\_Edge}!getResidualCapacity@{getResidualCapacity}}
+\index{getResidualCapacity@{getResidualCapacity}!Path\_Edge@{Path\_Edge}}
+\doxysubsubsection{\texorpdfstring{getResidualCapacity()}{getResidualCapacity()}}
+{\footnotesize\ttfamily int Path\+\_\+\+Edge\+::get\+Residual\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter of the residual\+Capacity parameter. 
+
+\begin{DoxyReturn}{Returns}
+The residual capacity of the edgee 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_path___edge_af7af90d0b07485557dc9841e5cc21c8e}\label{class_path___edge_af7af90d0b07485557dc9841e5cc21c8e}} 
+\index{Path\_Edge@{Path\_Edge}!getService@{getService}}
+\index{getService@{getService}!Path\_Edge@{Path\_Edge}}
+\doxysubsubsection{\texorpdfstring{getService()}{getService()}}
+{\footnotesize\ttfamily string Path\+\_\+\+Edge\+::get\+Service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter function of the service string. 
+
+\begin{DoxyReturn}{Returns}
+The associated service of the edge 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_path___edge_ae598a9aed060ba33c2a7c3c9997bb3bf}\label{class_path___edge_ae598a9aed060ba33c2a7c3c9997bb3bf}} 
+\index{Path\_Edge@{Path\_Edge}!isOK@{isOK}}
+\index{isOK@{isOK}!Path\_Edge@{Path\_Edge}}
+\doxysubsubsection{\texorpdfstring{isOK()}{isOK()}}
+{\footnotesize\ttfamily bool Path\+\_\+\+Edge\+::is\+OK (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter of the OK parameter associated with the edge. 
+
+\begin{DoxyReturn}{Returns}
+The value of the OK parameter associated with the edge 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_path___edge_a34be176078d8d2a96566a7297dda4d20}\label{class_path___edge_a34be176078d8d2a96566a7297dda4d20}} 
+\index{Path\_Edge@{Path\_Edge}!setFlow@{setFlow}}
+\index{setFlow@{setFlow}!Path\_Edge@{Path\_Edge}}
+\doxysubsubsection{\texorpdfstring{setFlow()}{setFlow()}}
+{\footnotesize\ttfamily void Path\+\_\+\+Edge\+::set\+Flow (\begin{DoxyParamCaption}\item[{int}]{flow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the parameter flow to the given value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flow} & The new value of the flow \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_path___edge_a052c5bc011219eaece809ed0ec282055}\label{class_path___edge_a052c5bc011219eaece809ed0ec282055}} 
+\index{Path\_Edge@{Path\_Edge}!setResidual@{setResidual}}
+\index{setResidual@{setResidual}!Path\_Edge@{Path\_Edge}}
+\doxysubsubsection{\texorpdfstring{setResidual()}{setResidual()}}
+{\footnotesize\ttfamily void Path\+\_\+\+Edge\+::set\+Residual (\begin{DoxyParamCaption}\item[{int}]{residual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the parameter residual\+Capacity to the given value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em residual} & The new value of the residual capacity \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_path___edge_a51611c3d08b8aa76cf9af58298f613c2}\label{class_path___edge_a51611c3d08b8aa76cf9af58298f613c2}} 
+\index{Path\_Edge@{Path\_Edge}!OK@{OK}}
+\index{OK@{OK}!Path\_Edge@{Path\_Edge}}
+\doxysubsubsection{\texorpdfstring{OK}{OK}}
+{\footnotesize\ttfamily bool Path\+\_\+\+Edge\+::\+OK}
+
+A boolean flag that indicates if the edge is available to traverse or not 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_path___edge_8h}{Path\+\_\+\+Edge.\+h}}\end{DoxyCompactItemize}

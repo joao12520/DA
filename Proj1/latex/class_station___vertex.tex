@@ -1,0 +1,251 @@
+\hypertarget{class_station___vertex}{}\doxysection{Station\+\_\+\+Vertex Class Reference}
+\label{class_station___vertex}\index{Station\_Vertex@{Station\_Vertex}}
+
+
+Represents a vertex in a graph that represents a station in a transportation network.  
+
+
+
+
+{\ttfamily \#include $<$Station\+\_\+\+Vertex.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_station___vertex_a9d28e47458d5980ff6b86246072a7fa2}{Station\+\_\+\+Vertex}} (string name, string district=\char`\"{}null\char`\"{}, string municipality=\char`\"{}null\char`\"{}, string township=\char`\"{}null\char`\"{}, string line=\char`\"{}null\char`\"{}, int code=-\/1)
+\begin{DoxyCompactList}\small\item\em Constructs a new \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} object. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_station___vertex_a87a299107f8a0b97f31b1559fbc12f07}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the station. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_station___vertex_af65f7598ae620d1eed7fd2025b93086d}{get\+District}} () const
+\begin{DoxyCompactList}\small\item\em Gets the district where the station is located. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_station___vertex_a3dfbd8967bb652dd8c593f123a0fbf8a}{get\+Municipality}} () const
+\begin{DoxyCompactList}\small\item\em Gets the municipality where the station is located. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_station___vertex_aa074913f2585a456fa84e55bf71532f3}{get\+Township}} () const
+\begin{DoxyCompactList}\small\item\em Gets the township where the station is located. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_station___vertex_a70479ad9f77943d92b2a1a943c441fc8}{get\+Line}} () const
+\begin{DoxyCompactList}\small\item\em Gets the line to which the station belongs. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_station___vertex_a4b2bff60e11745aa65973d19df70df11}{get\+Code}} () const
+\begin{DoxyCompactList}\small\item\em Gets the code associated with the station vertex. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_path___edge}{Path\+\_\+\+Edge}} $>$ \& \mbox{\hyperlink{class_station___vertex_aba574f879f4fb9439c2a2e4cffeba17e}{get\+Adj}} ()
+\begin{DoxyCompactList}\small\item\em Gets the adjacency list of the station vertex. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_station___vertex_a18f33f61c31f2560b83ccc48d1d6253f}{operator==}} (const \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} \&s2) const
+\begin{DoxyCompactList}\small\item\em Overloads the equality operator to compare two \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} objects based on their name member variable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_station___vertex_a42a0d4344104dce895df2b225e2f90a2}{set\+Visited}} (bool vis)
+\begin{DoxyCompactList}\small\item\em Sets the visited status of the station vertex. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_station___vertex_ae68fc0fac3bcbf1d90594fa6b95c4fc9}{set\+Dist}} (int dist)
+\begin{DoxyCompactList}\small\item\em Sets the distance from the source to this vertex. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_station___vertex_a64a4536bbfec9b94d53d8c0d19e1f6eb}{get\+Visited}} () const
+\begin{DoxyCompactList}\small\item\em Gets the value of the visited attribute. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_station___vertex_a0138b3540baf9d067101996dabb9831c}{get\+Dist}} () const
+\begin{DoxyCompactList}\small\item\em Gets the distance from the source to this vertex. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_station___vertex_a48469c55c1b95d6a00c5f01fe9415f59}\label{class_station___vertex_a48469c55c1b95d6a00c5f01fe9415f59}} 
+vector$<$ \mbox{\hyperlink{class_path___edge}{Path\+\_\+\+Edge}} $>$ {\bfseries adj}
+\begin{DoxyCompactList}\small\item\em The adjacency list of the station vertex. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a vertex in a graph that represents a station in a transportation network. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_station___vertex_a9d28e47458d5980ff6b86246072a7fa2}\label{class_station___vertex_a9d28e47458d5980ff6b86246072a7fa2}} 
+\index{Station\_Vertex@{Station\_Vertex}!Station\_Vertex@{Station\_Vertex}}
+\index{Station\_Vertex@{Station\_Vertex}!Station\_Vertex@{Station\_Vertex}}
+\doxysubsubsection{\texorpdfstring{Station\_Vertex()}{Station\_Vertex()}}
+{\footnotesize\ttfamily Station\+\_\+\+Vertex\+::\+Station\+\_\+\+Vertex (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{district = {\ttfamily \char`\"{}null\char`\"{}},  }\item[{string}]{municipality = {\ttfamily \char`\"{}null\char`\"{}},  }\item[{string}]{township = {\ttfamily \char`\"{}null\char`\"{}},  }\item[{string}]{line = {\ttfamily \char`\"{}null\char`\"{}},  }\item[{int}]{code = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a new \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the station. \\
+\hline
+{\em district} & The district where the station is located. \\
+\hline
+{\em municipality} & The municipality where the station is located. \\
+\hline
+{\em township} & The township where the station is located. \\
+\hline
+{\em line} & The line to which the station belongs. \\
+\hline
+{\em code} & A code associated with the station vertex. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_station___vertex_aba574f879f4fb9439c2a2e4cffeba17e}\label{class_station___vertex_aba574f879f4fb9439c2a2e4cffeba17e}} 
+\index{Station\_Vertex@{Station\_Vertex}!getAdj@{getAdj}}
+\index{getAdj@{getAdj}!Station\_Vertex@{Station\_Vertex}}
+\doxysubsubsection{\texorpdfstring{getAdj()}{getAdj()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_path___edge}{Path\+\_\+\+Edge}} $>$ \& Station\+\_\+\+Vertex\+::get\+Adj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the adjacency list of the station vertex. 
+
+\begin{DoxyReturn}{Returns}
+The adjacency list of the station vertex. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_station___vertex_a4b2bff60e11745aa65973d19df70df11}\label{class_station___vertex_a4b2bff60e11745aa65973d19df70df11}} 
+\index{Station\_Vertex@{Station\_Vertex}!getCode@{getCode}}
+\index{getCode@{getCode}!Station\_Vertex@{Station\_Vertex}}
+\doxysubsubsection{\texorpdfstring{getCode()}{getCode()}}
+{\footnotesize\ttfamily int Station\+\_\+\+Vertex\+::get\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the code associated with the station vertex. 
+
+\begin{DoxyReturn}{Returns}
+The code associated with the station vertex. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_station___vertex_a0138b3540baf9d067101996dabb9831c}\label{class_station___vertex_a0138b3540baf9d067101996dabb9831c}} 
+\index{Station\_Vertex@{Station\_Vertex}!getDist@{getDist}}
+\index{getDist@{getDist}!Station\_Vertex@{Station\_Vertex}}
+\doxysubsubsection{\texorpdfstring{getDist()}{getDist()}}
+{\footnotesize\ttfamily int Station\+\_\+\+Vertex\+::get\+Dist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the distance from the source to this vertex. 
+
+\begin{DoxyReturn}{Returns}
+The distance from the source to this vertex. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_station___vertex_af65f7598ae620d1eed7fd2025b93086d}\label{class_station___vertex_af65f7598ae620d1eed7fd2025b93086d}} 
+\index{Station\_Vertex@{Station\_Vertex}!getDistrict@{getDistrict}}
+\index{getDistrict@{getDistrict}!Station\_Vertex@{Station\_Vertex}}
+\doxysubsubsection{\texorpdfstring{getDistrict()}{getDistrict()}}
+{\footnotesize\ttfamily string Station\+\_\+\+Vertex\+::get\+District (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the district where the station is located. 
+
+\begin{DoxyReturn}{Returns}
+The district where the station is located. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_station___vertex_a70479ad9f77943d92b2a1a943c441fc8}\label{class_station___vertex_a70479ad9f77943d92b2a1a943c441fc8}} 
+\index{Station\_Vertex@{Station\_Vertex}!getLine@{getLine}}
+\index{getLine@{getLine}!Station\_Vertex@{Station\_Vertex}}
+\doxysubsubsection{\texorpdfstring{getLine()}{getLine()}}
+{\footnotesize\ttfamily string Station\+\_\+\+Vertex\+::get\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the line to which the station belongs. 
+
+\begin{DoxyReturn}{Returns}
+The line to which the station belongs. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_station___vertex_a3dfbd8967bb652dd8c593f123a0fbf8a}\label{class_station___vertex_a3dfbd8967bb652dd8c593f123a0fbf8a}} 
+\index{Station\_Vertex@{Station\_Vertex}!getMunicipality@{getMunicipality}}
+\index{getMunicipality@{getMunicipality}!Station\_Vertex@{Station\_Vertex}}
+\doxysubsubsection{\texorpdfstring{getMunicipality()}{getMunicipality()}}
+{\footnotesize\ttfamily string Station\+\_\+\+Vertex\+::get\+Municipality (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the municipality where the station is located. 
+
+\begin{DoxyReturn}{Returns}
+The municipality where the station is located. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_station___vertex_a87a299107f8a0b97f31b1559fbc12f07}\label{class_station___vertex_a87a299107f8a0b97f31b1559fbc12f07}} 
+\index{Station\_Vertex@{Station\_Vertex}!getName@{getName}}
+\index{getName@{getName}!Station\_Vertex@{Station\_Vertex}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Station\+\_\+\+Vertex\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the station. 
+
+\begin{DoxyReturn}{Returns}
+The name of the station. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_station___vertex_aa074913f2585a456fa84e55bf71532f3}\label{class_station___vertex_aa074913f2585a456fa84e55bf71532f3}} 
+\index{Station\_Vertex@{Station\_Vertex}!getTownship@{getTownship}}
+\index{getTownship@{getTownship}!Station\_Vertex@{Station\_Vertex}}
+\doxysubsubsection{\texorpdfstring{getTownship()}{getTownship()}}
+{\footnotesize\ttfamily string Station\+\_\+\+Vertex\+::get\+Township (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the township where the station is located. 
+
+\begin{DoxyReturn}{Returns}
+The township where the station is located. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_station___vertex_a64a4536bbfec9b94d53d8c0d19e1f6eb}\label{class_station___vertex_a64a4536bbfec9b94d53d8c0d19e1f6eb}} 
+\index{Station\_Vertex@{Station\_Vertex}!getVisited@{getVisited}}
+\index{getVisited@{getVisited}!Station\_Vertex@{Station\_Vertex}}
+\doxysubsubsection{\texorpdfstring{getVisited()}{getVisited()}}
+{\footnotesize\ttfamily int Station\+\_\+\+Vertex\+::get\+Visited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the value of the visited attribute. 
+
+\begin{DoxyReturn}{Returns}
+The value of the visited attribute. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_station___vertex_a18f33f61c31f2560b83ccc48d1d6253f}\label{class_station___vertex_a18f33f61c31f2560b83ccc48d1d6253f}} 
+\index{Station\_Vertex@{Station\_Vertex}!operator==@{operator==}}
+\index{operator==@{operator==}!Station\_Vertex@{Station\_Vertex}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Station\+\_\+\+Vertex\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} \&}]{s2 }\end{DoxyParamCaption}) const}
+
+
+
+Overloads the equality operator to compare two \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} objects based on their name member variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s2} & The \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} object to compare to this object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the two \mbox{\hyperlink{class_station___vertex}{Station\+\_\+\+Vertex}} objects have the same name, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_station___vertex_ae68fc0fac3bcbf1d90594fa6b95c4fc9}\label{class_station___vertex_ae68fc0fac3bcbf1d90594fa6b95c4fc9}} 
+\index{Station\_Vertex@{Station\_Vertex}!setDist@{setDist}}
+\index{setDist@{setDist}!Station\_Vertex@{Station\_Vertex}}
+\doxysubsubsection{\texorpdfstring{setDist()}{setDist()}}
+{\footnotesize\ttfamily void Station\+\_\+\+Vertex\+::set\+Dist (\begin{DoxyParamCaption}\item[{int}]{dist }\end{DoxyParamCaption})}
+
+
+
+Sets the distance from the source to this vertex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dist} & The distance from the source to this vertex. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_station___vertex_a42a0d4344104dce895df2b225e2f90a2}\label{class_station___vertex_a42a0d4344104dce895df2b225e2f90a2}} 
+\index{Station\_Vertex@{Station\_Vertex}!setVisited@{setVisited}}
+\index{setVisited@{setVisited}!Station\_Vertex@{Station\_Vertex}}
+\doxysubsubsection{\texorpdfstring{setVisited()}{setVisited()}}
+{\footnotesize\ttfamily void Station\+\_\+\+Vertex\+::set\+Visited (\begin{DoxyParamCaption}\item[{bool}]{vis }\end{DoxyParamCaption})}
+
+
+
+Sets the visited status of the station vertex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vis} & The visited status of the station vertex. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_station___vertex_8h}{Station\+\_\+\+Vertex.\+h}}\item 
+Station\+\_\+\+Vertex.\+cpp\end{DoxyCompactItemize}
